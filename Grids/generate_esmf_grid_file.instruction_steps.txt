@@ -1,0 +1,15 @@
+# This files contains the steps on how to generate an ESMF mesh file once the SCRIP file is available:
+
+
+module load ncarenv/24.12
+module load mpi-serial/2.5.0
+
+export infile="cism_grid/SCRIP_FILES/SCRIPgrid_GrIS_4km_epsg3413_c160524.nc"
+export outfile="ESMF_mesh_GrIS_4km.nc"
+
+ESMF_Scrip2Unstruct infile outfile 0
+
+
+
+
+
